@@ -67,7 +67,7 @@ CLIENT_SETTINGS_HOSTS: frozenset = frozenset(
     {'clientsettingscdn.roblox.com', 'clientsettings.roblox.com'}
 )
 CDN_HOSTS: frozenset = frozenset({'fts.rbxcdn.com', 'contentdelivery.roblox.com'})
-BASE_INTERCEPT_HOSTS: frozenset = frozenset({ASSET_DELIVERY_HOST, GAMEJOIN_HOST, *CDN_HOSTS})
+BASE_INTERCEPT_HOSTS: frozenset = frozenset({ASSET_DELIVERY_HOST, *CDN_HOSTS})
 USERNAME_SPOOFER_INTERCEPT_HOSTS: frozenset = frozenset({PROFILE_API_HOST})
 CUSTOM_FFLAGS_INTERCEPT_HOSTS: frozenset = CLIENT_SETTINGS_HOSTS
 INTERCEPT_HOSTS: frozenset = (
