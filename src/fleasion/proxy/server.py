@@ -63,16 +63,12 @@ ASSET_DELIVERY_HOST = 'assetdelivery.roblox.com'
 GAMEJOIN_HOST = 'gamejoin.roblox.com'
 PROFILE_API_HOST = 'apis.roblox.com'
 PROFILE_API_PATH_FRAGMENT = '/v1/user/profiles/get-profiles'
-CLIENT_SETTINGS_HOSTS: frozenset = frozenset(
-    {'clientsettingscdn.roblox.com', 'clientsettings.roblox.com'}
-)
-CDN_HOSTS: frozenset = frozenset({'fts.rbxcdn.com', 'contentdelivery.roblox.com'})
-BASE_INTERCEPT_HOSTS: frozenset = frozenset({ASSET_DELIVERY_HOST, *CDN_HOSTS})
-USERNAME_SPOOFER_INTERCEPT_HOSTS: frozenset = frozenset({PROFILE_API_HOST})
-CUSTOM_FFLAGS_INTERCEPT_HOSTS: frozenset = CLIENT_SETTINGS_HOSTS
-INTERCEPT_HOSTS: frozenset = (
-    BASE_INTERCEPT_HOSTS | USERNAME_SPOOFER_INTERCEPT_HOSTS | CUSTOM_FFLAGS_INTERCEPT_HOSTS
-)
+CLIENT_SETTINGS_HOSTS: frozenset = frozenset()
+CDN_HOSTS: frozenset = frozenset()
+BASE_INTERCEPT_HOSTS: frozenset = frozenset({ASSET_DELIVERY_HOST})
+USERNAME_SPOOFER_INTERCEPT_HOSTS: frozenset = frozenset()
+CUSTOM_FFLAGS_INTERCEPT_HOSTS: frozenset = frozenset()
+INTERCEPT_HOSTS: frozenset = BASE_INTERCEPT_HOSTS
 ASSET_TRAFFIC_MISSING_DIAGNOSTIC_SECONDS = 20.0
 UPSTREAM_ENDPOINT_REFRESH_COOLDOWN_SECONDS = 5.0
 UPSTREAM_ENDPOINT_REFRESH_RETRY_TIMEOUT = 3.0
